@@ -34,7 +34,7 @@ import java.util.List;
 
 @XMLCalabash(
         name = "cx:xslthl",
-        type = "{http://xmlcalabash.com/ns/extensions}XsltHL")
+        type = "{http://xmlcalabash.com/ns/extensions}xslthl")
 
 public class XsltHL extends DefaultStep implements ProcessMatchingNodes {
     private static final QName _highlighter = new QName("highlighter");
