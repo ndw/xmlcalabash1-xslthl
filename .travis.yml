@@ -1,13 +1,16 @@
 language: java
-script: ./gradlew dist
+
+script: "./gradlew dist"
+
 install:
-- echo sonatypeUsername=none >> gradle.properties
-- echo sonatypePassword=none >> gradle.properties
+  - echo sonatypeUsername=none >> gradle.properties
+  - echo sonatypePassword=none >> gradle.properties
+
 deploy:
-  skip_cleanup: true
   provider: releases
   api_key:
-    secure: E9jf8jd6BEHFpouZ5zDTYAto9VUcxi+3SAxmsMj35fTT9qKUK0pSq/oB351AwMp1KVUUwYRIUO7nTK5A83Zwx77geC1VjC0A2pvAffdLjPltFVG4R534U100e0i4h3UjCGgSSBI3IvLvlvR33+ICIuSgIOx1fD/58I6gKmM5NeAg+Va95mlcD69oLkd1rh5VOWFBhwdfXJSQwSTNgPs1gKxnYHrzMXDAranD6Qu46pZV80UrE/Qjd3C1Z/FczubBJRywHW+oXhvTaRNgUb4WDQxzwezuHuDqyrjnlXkxPvwKQMDzp8Ig51ylUwFBWGEp2Jd5xIpnOyNgJqgFO5UMUcR7gkAu4te3BUGrtTvbbs9n0gT4gMwy5vnbG3b7HdHZvO97rg+rXRgyT9dy3+7xmU3uXvRgkGztfcCU4/++KD56OqwosBDmXZmlzUVx638Nc4nBC4ArmRxOXheUnhipVirsRdyLjiGgoOUMY8rTM9SLsZowqnrHOe+VRMi8jjEg0eqydVE2MoazBgJkYzfT/fW69YfAj4JP40gDqcA0SLP0WLe9r5g5Z6wuaJ2h+TnvqS6sXguAQr92SdLam8wuUQq4qdGExHES8JD2CE+4LqWF840VsdygEppIRGau/uYOoInwFqLjkIAbboa2vOBKREKoglJdbnxCjfuIkkRo5wM=
+    secure: K7T09aIDyGQqMyo8AZiQDJieJUJ8LESvtxJLAqYBMDYeqF7N6w5GPkgF3s9ocXO+DLq4QsqR5TZS43esiEU/mAqi5mPq0UU99zVBQl8WleFZJQy+LrxcF+nQmca6GkrP+ST0Blq3rtIJRrvGcVY46oiI3wCAJslUqoGVKBacrjZ+oY5/QmJL27GaiMXfKG2mQ4vQZmR2S9o/15yQGxIjXgT8ayjTq/OZM0Nats0U4gBaLyZ86pu+IjltmrlcLrednx+B7Z4zR43gss3HyujQVV6LM5MjCS5hppmPhD4ZF8UC69bU8SxVoDTfhq8b5A0FKDY2FrxiO7S3cWnprHtF4LwUHcxU7hsNCCAnRj5tyQDH9r27RE84YAtuSYLRdIqcAbb2eLt6iphX+CWzWicqXP7IExFyaN5FIAS8R8ISRG9PkF++TnVkNcI0NDlKu+EaGdViCPuCWCpaKr3+F8iuTgCsitv29f4qFkMwrlHkkX+R5iBJPKR0erIVCeQt6M5VJ92mgmBUlQzaqa2KflAGu4HIMb33teedQ7mPfaDptIRnSs2imvf9pqgQXqemx2gyCy34uwsPElIIrHmLLgbXoTzMINp2OtemQBjPZ+XhLAuak80p2AAkmWZAKSc7CoZr8KqhMsRvVZivlLSzklo+3F98MfnELxYfm2byVmzBFF0=
+  skip_cleanup: true
   file: build/distributions/xmlcalabash1-xslthl-$TRAVIS_TAG.zip
   on:
     tags: true
